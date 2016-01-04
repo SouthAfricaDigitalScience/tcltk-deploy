@@ -46,7 +46,7 @@ setenv TCL_VERSION $VERSION
 setenv TK_VERSION  $VERSION
 setenv TCL_DIR $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 setenv TK_DIR $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
-prepend-path LD_LIBRARY_PATH $::env(TCL_DIR}/lib
+prepend-path LD_LIBRARY_PATH $::env(TCL_DIR)/lib
 prepend-path PATH $::env(TCL_DIR)/bin
 MODULE_FILE
 ) > modules/${VERSION}
