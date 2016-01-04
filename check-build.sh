@@ -3,14 +3,14 @@
 . /etc/profile.d/modules.sh
 module add ci
 # first check tcl
-cd ${WORKSPACE}/tcl${VERSION}/build-${BUILD_NUMBER}
+cd ${WORKSPACE}/tcl${VERSION}/unix/build-${BUILD_NUMBER}
 make test
 make install
 
 # if this passes, we good :)
 
 # now, check tk
-cd ${WORKSPACE}/tk${VERSION}/build-${BUILD_NUMBER}
+cd ${WORKSPACE}/tk${VERSION}/unix/build-${BUILD_NUMBER}
 # TK tests need X, so not much use in making test, but we'll check if wish and libtk are there
 ls  -lht wish
 ls -lht *.so
