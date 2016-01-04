@@ -51,7 +51,7 @@ echo ""
 echo "making Tk"
 cd ${WORKSPACE}/tk${VERSION}/unix/build-${BUILD_NUMBER}
 ../configure \
---with-tcl=${WORKSPACE}/${NAME}-${VERSION}/tcl${VERSION}/unix/build-${BUILD_NUMBER} \
+--with-tcl=${WORKSPACE}/tcl${VERSION}/unix/build-${BUILD_NUMBER} \
 --enable-threads  \
 --enable-shared \
 --enable-64bit \
