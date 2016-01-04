@@ -38,7 +38,7 @@ done
 
 # now build tcl and tk - these have different configs and need to be done in sequence, so we can do without a loop here.
 echo "making tcl"
-cd ${WORKSPACE}/${NAME}-${VERSION}/tcl${VERSION}/unix/build-${BUILD_NUMBER}
+cd ${WORKSPACE}/tcl${VERSION}/unix/build-${BUILD_NUMBER}
 ../configure \
 --enable-64bit \
 --enable-shared \
@@ -49,7 +49,7 @@ make -j2
 echo ""
 
 echo "making Tk"
-cd ${WORKSPACE}/${NAME}-${VERSION}/tk${VERSION}/unix/build-${BUILD_NUMBER}
+cd ${WORKSPACE}/tk${VERSION}/unix/build-${BUILD_NUMBER}
 ../configure \
 --with-tcl=${WORKSPACE}/${NAME}-${VERSION}/tcl${VERSION}/unix/build-${BUILD_NUMBER} \
 --enable-threads  \
