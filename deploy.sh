@@ -57,6 +57,17 @@ module avail
 module add deploy
 module add tcltk
 echo "wish : "
-which wish
+which wish${VERSION:0:3} # should give wish8.6 for version 8.6.4
 echo "tclsh : "
+which tclsh${VERSION:0:3}
+cd ${SOFT_DIR}/bin
+
+echo "linking"
+for bin in `ls` ; do
+  short=`echo $bin | cut -d '8' -f 1`
+  echo "Short version is $short"
+  ln -s ${bin} $short
+done
+
+which wish
 which tclsh
