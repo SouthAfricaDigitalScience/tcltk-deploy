@@ -66,7 +66,7 @@ echo "linking"
 for bin in `ls` ; do
   short=`echo $bin | cut -d '8' -f 1`
   echo "Short version is $short"
-  if [ ! -h ${short} ] ;
+  if [ ! -h ${short} ]; then
     ln -s ${bin} $short
   fi
 done
