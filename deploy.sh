@@ -21,7 +21,7 @@ echo ""
 echo "making Tk"
 cd ${WORKSPACE}/tk${VERSION}/unix/build-${BUILD_NUMBER}
 ../configure \
---with-tcl=${SOFT_DIR} \
+--with-tcl=${SOFT_DIR}/bin \
 --enable-threads  \
 --enable-shared \
 --enable-64bit \
