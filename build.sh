@@ -32,7 +32,7 @@ for STEP in ${STEPS[@]} ; do
 # Untar both files
   tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 # make the build directories
-  mkdir -p ${WORKSPACE}/${NAME}-${VERSION}/${STEP}${VERSION}/unix/build-${BUILD_NUMBER}
+  mkdir -p ${WORKSPACE}/${STEP}${VERSION}/unix/build-${BUILD_NUMBER}
 done
 
 
