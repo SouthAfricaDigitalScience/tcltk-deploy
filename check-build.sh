@@ -29,8 +29,8 @@ proc ModulesHelp { } {
 module-whatis "Sets the environment for using $NAME ($VERSION.) See https://github.com/SouthAfricaDigitalScience/tcltk-deploy"
 setenv TCL_VERSION $VERSION
 setenv TK_VERSION  $VERSION
-setenv TCL_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
-setenv TK_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
+setenv TCL_DIR $::env(SOFT_DIR)
+setenv TK_DIR $::env(SOFT_DIR)
 prepend-path LD_LIBRARY_PATH $::env(TCL_DIR)/lib
 prepend-path PATH $::env(TCL_DIR)/bin
 MODULE_FILE
@@ -51,7 +51,7 @@ echo "linking"
 for bin in `ls` ; do
   short=`echo $bin | cut -d '8' -f 1`
   echo "Short version is $short"
-  if [ ! -h ${short} ] ; then 
+  if [ ! -h ${short} ] ; then
     ln -s ${bin} $short
   fi
 done
