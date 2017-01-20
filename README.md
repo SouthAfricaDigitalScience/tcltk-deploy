@@ -1,7 +1,12 @@
 [![Build Status](https://ci.sagrid.ac.za/buildStatus/icon?job=tcltk-deploy)](https://ci.sagrid.ac.za/job/tcltk-deploy)
 
 # tcltk-deploy
+
 Build, test and deploy scripts for [Tcl/Tk](https://tcl.tk/)
+
+# Dependencies
+
+This project has no dependencies
 
 # Versions
 
