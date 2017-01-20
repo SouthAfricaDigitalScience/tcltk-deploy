@@ -60,10 +60,10 @@ echo "wish : "
 which wish${VERSION:0:3} # should give wish8.6 for version 8.6.4
 echo "tclsh : "
 which tclsh${VERSION:0:3}
-cd ${SOFT_DIR}/bin
+cd ${TCL_DIR}/bin
 
 echo "linking"
-for bin in `ls` ; do
+for bin in `ls |grep ${VERSION:0:3} ` ; do
   short=`echo $bin | cut -d '8' -f 1`
   echo "Short version is $short"
   if [ ! -h ${short} ]; then
