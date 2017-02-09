@@ -2,7 +2,7 @@
 
 # tcltk-deploy
 
-Build, test and deploy scripts for [Tcl/Tk](https://tcl.tk/)
+Build, test and deploy scripts for [Tcl/Tk](https://tcl.tk/) from CODE-RADE
 
 # Dependencies
 
@@ -16,11 +16,25 @@ Versions built are:
 
 # Configuration
 
+It seems there is no easy way to turn off building against X, so what the hell, we keep that in the standard location.
+
 The builds are configured with :
+
+## TK configuration
 
 ```
 --enable-64bit \
 --enable-shared \
 --enable-threads \
+```
+
+## TCL configuration
 
 ```
+--with-tcl=${WORKSPACE}/tcl${VERSION}/unix/build-${BUILD_NUMBER} \
+--enable-threads  \
+--enable-shared \
+--enable-64bit \
+--enable-xft
+```
+# Citing

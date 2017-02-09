@@ -29,10 +29,10 @@ proc ModulesHelp { } {
 module-whatis "Sets the environment for using $NAME ($VERSION.) See https://github.com/SouthAfricaDigitalScience/tcltk-deploy"
 setenv TCL_VERSION $VERSION
 setenv TK_VERSION  $VERSION
-setenv TCL_DIR /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
-setenv TK_DIR /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
-prepend-path LD_LIBRARY_PATH $::env(TCL_DIR)/lib
-prepend-path PATH $::env(TCL_DIR)/bin
+setenv TCL_DIR                                 /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
+setenv TK_DIR                                   /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
+prepend-path LD_LIBRARY_PATH  $::env(TCL_DIR)/lib
+prepend-path PATH                          $::env(TCL_DIR)/bin
 MODULE_FILE
 ) > modules/${VERSION}
 mkdir -p ${LIBRARIES_MODULES}/${NAME}

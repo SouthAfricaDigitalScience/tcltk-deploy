@@ -45,7 +45,7 @@ cd ${WORKSPACE}/tcl${VERSION}/unix/build-${BUILD_NUMBER}
 --enable-threads \
 --prefix=${SOFT_DIR}
 
-make -j2
+make
 echo ""
 
 echo "making Tk"
@@ -58,5 +58,5 @@ cd ${WORKSPACE}/tk${VERSION}/unix/build-${BUILD_NUMBER}
 --enable-xft \
 --prefix=${SOFT_DIR}
 
-make -j2
+make
 echo ""
