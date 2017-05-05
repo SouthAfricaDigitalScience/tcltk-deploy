@@ -1,4 +1,5 @@
-[![Build Status](https://ci.sagrid.ac.za/buildStatus/icon?job=tcltk-deploy)](https://ci.sagrid.ac.za/job/tcltk-deploy)
+[![Build Status](https://ci.sagrid.ac.za/buildStatus/icon?job=tcltk-deploy)](https://ci.sagrid.ac.za/job/tcltk-deploy) [![DOI](https://zenodo.org/badge/48986476.svg)](https://zenodo.org/badge/latestdoi/48986476)
+
 
 # tcltk-deploy
 
@@ -38,3 +39,6 @@ The builds are configured with :
 --enable-xft
 ```
 # Citing
+
+Cite as
+Bruce Becker. (2017). SouthAfricaDigitalScience/tcltk-deploy: CODE-RADE Foundation Release 3 - Tcl/Tk [Data set]. Zenodo. http://doi.org/10.5281/zenodo.571827
